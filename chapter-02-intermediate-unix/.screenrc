@@ -1,0 +1,11 @@
+shell -$SHELL
+startup_message off
+defscrollback 30000
+autodetach on
+hardstatus on
+hardstatus alwayslastline
+altscreen on
+shelltitle "$ |bash" # make screen assign window titles automatically
+
+
+hardstatus string '%{= kw}[ %{= kb}%H%{= kw} ][%= %{= kw}%?%-Lw%?%{= kW}%n*%f %t%?%?%{= kw}%?%+Lw%?%?%= ][ %{r}%l%{w} ]%{w}[%{r} %d/%m/%y %C %A %{w}]%{w}'
