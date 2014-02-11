@@ -15,14 +15,17 @@ this much easier. Oh-my-zsh includes community-contributed plugins for
 working with Git, OS X, and other programs, as well as numerous
 themes.
 
-## Unix Pipes
+## History of Unix and the Unix Philosophy
 
  - [cat-v.org](http://cat-v.org) has the full McIlroy quote about
    [pipes](http://doc.cat-v.org/unix/pipes/).
  - [The Evolution of the Unix Time-sharing
    System](http://cm.bell-labs.com/cm/cs/who/dmr/hist.html)
 
-A great quote from Victor Vyssotsky, from this [stellar Bell AT&T Labs video on Unix, featuring Thompson, Kernighan, Ritchie](http://www.youtube.com/watch?v=tc4ROCJYbm0) 
+A great quote from Victor Vyssotsky, from this [stellar Bell AT&T Labs video on
+Unix, featuring Thompson, Kernighan,
+Ritchie](http://www.youtube.com/watch?v=tc4ROCJYbm0):
+
 
 > What's important about the Unix system is not so much what Ritchie and
 > Thompson put into it, as what they were able to leave out
