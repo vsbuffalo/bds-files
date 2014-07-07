@@ -1,5 +1,7 @@
 # The Supplementary Material Repository for Bioinformatics Data Skills
 
+![The cover of "Bioinformatics Data Skills"](http://akamaicovers.oreilly.com/images/0636920030157/rc_lrg.jpg)
+
 **Caveat emptor: this book is still being actively written, so all materials in
 this repository may chnage**.
 
