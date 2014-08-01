@@ -14,4 +14,6 @@ grep "^#" -v Mus_musculus.GRCm38.75_chr1.gtf | awk '{if ($3=="gene" && $2 == "pr
 
 wc -l Mus_musculus.GRCm38.75_chr1_genes.txt
 
-verify in martview http://uswest.ensembl.org/biomart/martview/
+verify in martview http://uswest.ensembl.org/biomart/martview/ == same number
+
+contam.fastq -- shorter version (used in book so examples print more clearly)
