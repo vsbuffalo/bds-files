@@ -17,3 +17,28 @@ wc -l Mus_musculus.GRCm38.75_chr1_genes.txt
 verify in martview http://uswest.ensembl.org/biomart/martview/ == same number
 
 contam.fastq -- shorter version (used in book so examples print more clearly)
+
+## Parsing GTF Group Column with Awk/Bioawk
+
+This can be quite messy... consider:
+
+      bioawk -c gff '$3 ~ /gene/ && $2 ~ /protein_coding/ \
+          {split($group, a, "; ");                        \
+          print $seqname,$end-$start, a[1]}' Mus_musculus.GRCm38.75_chr1.gtf | \
+          sed -e 's/gene_id //' -e 's/"//g'
+
+This assumes that gene name will always be in the first column of group (a safe
+assumption for well-formatted GTFs).
+
+I may take the time to do this with Python. For example, the last column can
+easily be turned into a dictionary with:
+
+    group = 'gene_id "ENSMUSG00000090025"; gene_name "Gm16088"; gene_source "havana"; gene_biotype "pseudogene";'
+    def parse_keyvals(x):
+        key, val = x.split(" ")
+        return (key, val.replace('"', ''))
+
+    keyvals = dict([parse_keyvals(x) for x in group.strip(";").split("; ")])
+
+    # keyvals:
+    # {'gene_source': 'havana', 'gene_biotype': 'pseudogene', 'gene_name': 'Gm16088', 'gene_id': 'ENSMUSG00000090025'}

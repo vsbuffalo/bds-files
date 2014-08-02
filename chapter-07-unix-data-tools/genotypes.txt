@@ -1,0 +1,11 @@
+id	ind_A	ind_B	ind_C	ind_D
+S_000	G/G	A/G	A/A	A/G
+S_001	A/T	A/T	T/T	T/T
+S_002	C/T	T/T	C/C	C/T
+S_003	C/T	C/T	C/T	C/C
+S_004	C/G	G/G	C/C	C/G
+S_005	A/T	A/T	A/T	T/T
+S_006	C/G	C/C	C/G	C/G
+S_007	A/G	G/G	A/A	G/G
+S_008	G/T	G/T	T/T	G/T
+S_009	C/C	C/C	A/A	A/C

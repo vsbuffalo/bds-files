@@ -1,0 +1,9 @@
+chrom	length
+chr1	13
+chr1	15
+chr3	17
+chr1	9
+chr3	11
+chr1	19
+chr2	19
+chr1	9
