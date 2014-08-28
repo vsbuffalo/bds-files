@@ -8,7 +8,9 @@
    in chapter 7 for `less` examples.
 
  - Heng Li's `readfq.py`, downloaded from
-   https://github.com/lh3/readfq/blob/master/readfq.py
+   https://github.com/lh3/readfq/blob/master/readfq.py. See it's commit
+history, which is mentioned in the book:
+https://github.com/lh3/readfq/commits/master/readfq.py
 
  - `untreated1_chr4.fq`: a FASTQ file generated from the
    [pasillaBamSubset](http://www.bioconductor.org/packages/release/data/experiment/html/pasillaBamSubset.html)
