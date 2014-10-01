@@ -48,10 +48,13 @@ def cleanfield(x):
     Simple cleaning function: if field is 'NR' or '', make None (in SQLite this
     is NULL), otherwise, strip field.
     """
+    if x is None:
+        return x
     x = x.strip()
-    if x is "NR" or len(x) == 0:
+    if x.upper() in ("-", "NONE", "NA", "NR") or len(x) == 0:
         return None
     return x
+
 
 conn = sqlite3.connect(db_filename)
 conn.text_factory = str
@@ -80,10 +83,20 @@ for line in reader(gwas_filename):
             #import pdb; pdb.set_trace()
             coerced_fields.extend((snp.strip(), allele))
             continue
+        if col in ("dbdate", "date"):
+            month, day, year = field.split('/')
+            # into ISO 8601
+            coerced_fields.append("%s-%s-%s" % (year, month, day))
+            continue
         try:
             typefun = TYPES.get(ftype, None)
             if typefun is not None:
-                coerced_fields.append(typefun(cleanfield(field)))
+                cfield = cleanfield(field)
+                if cfield is None:
+                    coerced_fields.append(None)
+                else:
+                    # coerce only if not None
+                    coerced_fields.append(typefun(cfield))
             else:
                 coerced_fields.append(cleanfield(field))
         except:

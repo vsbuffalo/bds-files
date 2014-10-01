@@ -1,0 +1,6 @@
+1	1	Asthma, hay fever	rs9273373
+2	1	Asthma, hay fever	rs4833095
+3	1	Asthma, hay fever	rs1438673
+4	2	Hypertension	rs2820037
+5	2	Crohn's disease	rs6596075
+6		Urate levels	rs12498742
