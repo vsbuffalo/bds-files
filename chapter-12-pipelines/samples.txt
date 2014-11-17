@@ -1,0 +1,6 @@
+zmaysA	R1	seq/zmaysA_R1.fastq
+zmaysA	R2	seq/zmaysA_R2.fastq
+zmaysB	R1	seq/zmaysB_R1.fastq
+zmaysB	R2	seq/zmaysB_R2.fastq
+zmaysC	R1	seq/zmaysC_R1.fastq
+zmaysC	R2	seq/zmaysC_R2.fastq

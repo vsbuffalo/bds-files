@@ -149,3 +149,15 @@ Date's writings ([Date on Database: Writings
 are interesting and show some of the disagreement with, and extensions of
 Codd's definitions.
 
+
+## Python and SQLite3
+
+I mention that you should always use
+[placeholders](https://docs.python.org/2/library/sqlite3.html#sqlite3.Cursor.execute)
+in SQL statements. Although the focus of this chapter is not creating and
+working with databases open to the public, it's worth noting that not handling
+query building correctly can lead to disasterious results. There's a classic
+[xkcd](http://xkcd.com/327/) on this:
+
+![](http://imgs.xkcd.com/comics/exploits_of_a_mom.png)
+
