@@ -50,8 +50,30 @@ gsave(p, "gc-01")
 p <- ggplot(d) + geom_bar(aes(x=GC.binned)) + theme
 q <- ggplot(d) + geom_bar(aes(x=percent.GC)) + theme
 r <- arrangeGrob(p, q, nrow=1)
-gsave(r, "gc-02")
+gsave(p, "gc-02")
+
 
 ## motif example
 mtfs <- read.delim("motif_recombrates.txt", header=TRUE)
-rpts <- read.delim("motif_recombrates.txt", header=TRUE)
+rpts <- read.delim("motif_repeats.txt", header=TRUE)
+mtfs$pos <- paste(mtfs$chr, mtfs$motif_start, sep="-")
+rpts$pos <- paste(rpts$chr, rpts$motif_start, sep="-")
+mtfs$repeat_name <- rpts$name[match(mtfs$pos, rpts$pos)]
+
+p <- ggplot(mtfs, aes(x=dist, y=recom)) + geom_point(size=1) + geom_smooth(method='loess', se=FALSE, span=1/10) +theme
+gsave(p, "mtfs-01")
+
+
+p <- ggplot(mtfs, aes(x=dist, y=recom)) + geom_point(size=1, color="grey") + geom_smooth(method='loess', se=FALSE, span=1/10) + facet_wrap(~ motif) + theme
+gsave(p, "mtfs-02")
+
+
+p <- ggplot(mtfs, aes(x=dist, y=recom)) + geom_point(size=1, color="grey") + geom_smooth(method='loess', se=FALSE, span=1/16) + facet_grid(repeat_name ~ motif) + theme
+gsave(p, "mtfs-03")
+
+
+p <- ggplot(mtfs, aes(x=dist, y=recom)) + geom_point(size=1, color="grey") + geom_smooth(method='loess', se=FALSE, span=1/16) + facet_wrap( ~ motif, scales="free_y") + theme
+gsave(p, "mtfs-04")
+
+
+

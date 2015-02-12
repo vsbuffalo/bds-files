@@ -1,7 +1,5 @@
 # Resources for Chapter 8 - A Rapid Introduction to the R Language
 
-
-
 ## Exploring the Data in "The Influence of Recombination on Human Genetic Diversity"
 
 
@@ -92,3 +90,26 @@ Our centromere position is thus the start position of the leftmost p arm
         'BEGIN {print "bin","swScore","milliDiv","milliDel","milliIns","genoName", \ 
     	"genoStart","genoEnd","genoLeft","strand","repName","repClass","repFamily", \
     	"repStart","repEnd","repLeft","id"} {print $0}' | gzip > chrX_rmsk.txt.gz
+
+
+# Hot Spot Data
+
+    $ curl http://hgdownload.soe.ucsc.edu/goldenPath/hg16/database/hapmapRecombHotspots.txt.gz | gzcat | cut -f 2-4 > hapmapRecombHotspots.bed
+
+## A Note About `ifelse()`:
+
+`ifelse()` is readable and clear, but just as note — it can be slower than the
+following:
+
+    > x <- c(-3, 1, -5, 2)
+    > y <- rep(1, length(x))
+    > y[x < 0] <- -1
+    > y
+    [1] -1  1 -1  1
+
+## HapMap Hotspot Data for the Data Combining Example
+
+
+    $ wget http://hgdownload.soe.ucsc.edu/goldenPath/hg17/database/hapmapRecombHotspots.txt.gz
+    $ gzcat hapmapRecombHotspots.txt.gz | cut -f2-4 > hapmapRecombHotspots.bed
+
