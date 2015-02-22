@@ -1,7 +1,6 @@
 # Resources for Chapter 8 - A Rapid Introduction to the R Language
 
-## Exploring the Data in "The Influence of Recombination on Human Genetic Diversity"
-
+## The "The Influence of Recombination on Human Genetic Diversity" Dataset
 
 The original article *The Influence of Recombination on Human Genetic
 Diversity* by Spencer et al., 2006 is available from [PLOS
@@ -86,15 +85,12 @@ Our centromere position is thus the start position of the leftmost p arm
 
 ## Repeat Data
 
+Data for the repeat examples was created with:
+
     $ zgrep "chrX" motif-example/data/rmsk.txt.gz | awk -v "OFS=\t" \
         'BEGIN {print "bin","swScore","milliDiv","milliDel","milliIns","genoName", \ 
     	"genoStart","genoEnd","genoLeft","strand","repName","repClass","repFamily", \
     	"repStart","repEnd","repLeft","id"} {print $0}' | gzip > chrX_rmsk.txt.gz
-
-
-# Hot Spot Data
-
-    $ curl http://hgdownload.soe.ucsc.edu/goldenPath/hg16/database/hapmapRecombHotspots.txt.gz | gzcat | cut -f 2-4 > hapmapRecombHotspots.bed
 
 ## A Note About `ifelse()`:
 
@@ -109,7 +105,11 @@ following:
 
 ## HapMap Hotspot Data for the Data Combining Example
 
+I use HapMap recombination hotspots on hg17 in this example. The very simple
+file `split_hotspots.R` takes this file and splits `hapmapRecombHotspots.bed`
+by chromosome.
 
     $ wget http://hgdownload.soe.ucsc.edu/goldenPath/hg17/database/hapmapRecombHotspots.txt.gz
     $ gzcat hapmapRecombHotspots.txt.gz | cut -f2-4 > hapmapRecombHotspots.bed
+    $ Rscript split_hotspots.R
 
