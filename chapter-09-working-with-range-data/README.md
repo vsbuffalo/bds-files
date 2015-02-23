@@ -1,5 +1,27 @@
 # Ranges Chapter Supplementary Material
 
+## A note on the Introduction
+
+While the simple linear sequence representation of genomes begins to break down
+when we consider structural variants like insertions, deletions,
+translocations, copy number variants, etc. -- everything is better thought of
+as a graph. There's exciting new work in representing and working with
+sequences as graphs, e.g. the preprints [Dilthey et al.,
+2014](http://biorxiv.org/content/early/2014/07/08/006973) and [Paten et al.,
+2014](http://arxiv.org/abs/1404.5010).
+
+## S4Vectors
+
+As of writing this chapter, parts of the `IRanges` package are being [split
+off](https://stat.ethz.ch/pipermail/bioc-devel/2014-April/005580.html) into the
+new `S4Vectors` package. I only discuss these lower-level topics briefly, but
+if you want more information see [the IRanges
+vignette](http://bioconductor.org/packages/release/bioc/vignettes/IRanges/inst/doc/IRangesOverview.pdf)
+and the [S4Vectors
+page](http://www.bioconductor.org/packages/release/bioc/html/S4Vectors.html). I
+don't link these directly in the book because these links and vignette content
+may change.
+
 ## Files
 
 - `Mus_musculus.GRCm38.75_chr1.gtf.gf` are chromosome 1 annotations extracted

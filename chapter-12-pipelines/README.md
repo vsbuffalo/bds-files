@@ -14,3 +14,9 @@ book. Not all commands obey `set -e`, with the most clear example being
 commands in the `if` conditional. More on this can be found on the [Bash FAQ
 page](http://mywiki.wooledge.org/BashFAQ/105).
 
+## Extended Test Syntax
+
+I don't mention this in the book (to keep things simple), but Bash versions
+greater than 2.02 support an *extended test syntax* based on double brackets
+like `[[ ... ]]`. This syntax has support for common operators like `<`, `>`,
+`&&` and `||`.
