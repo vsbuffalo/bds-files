@@ -18,6 +18,16 @@ verify in martview http://uswest.ensembl.org/biomart/martview/ == same number
 
 contam.fastq -- shorter version (used in book so examples print more clearly)
 
+## Regular Expressions
+
+![xkcd 1171](http://imgs.xkcd.com/comics/perl_problems.png)
+
+There's numerous good resources on Regular Expressions, but one of the best ways to tackle regular expression problems is with an interactive debugger like:
+
+ - [regular expressions 101](https://regex101.com/)
+ - [Debbugex](https://www.debuggex.com/)
+
+
 ## Parsing GTF Group Column with Awk/Bioawk
 
 This can be quite messy... consider:
@@ -42,3 +52,9 @@ easily be turned into a dictionary with:
 
     # keyvals:
     # {'gene_source': 'havana', 'gene_biotype': 'pseudogene', 'gene_name': 'Gm16088', 'gene_id': 'ENSMUSG00000090025'}
+
+## Conclusion
+
+If you're interested in where the "one feverish night" quote came from, it's
+from a document by [Doug
+McIlroy](http://doc.cat-v.org/unix/unix-reader/reader.pdf).
