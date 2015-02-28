@@ -20,3 +20,9 @@ I don't mention this in the book (to keep things simple), but Bash versions
 greater than 2.02 support an *extended test syntax* based on double brackets
 like `[[ ... ]]`. This syntax has support for common operators like `<`, `>`,
 `&&` and `||`.
+
+## Makefile Example
+
+If you want to checkout another Makefile example see
+`chapter-11-alignment/celegans-reads/Makefile` for an example of how a
+read-creating pipeline.
