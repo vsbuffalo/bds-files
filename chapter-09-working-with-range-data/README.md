@@ -30,13 +30,14 @@ may change.
 
         gzcat Mus_musculus.GRCm38.75.gtf.gz | egrep "^(1\t|#)" | gzip > Mus_musculus.GRCm38.75_chr1.gtf.gf
 
-- `mm10_snp137_chr1_trunc.bed.gz` is a truncated version of
+- `mm10_snp137_chr1_trunc.bed.gz` is a randomly sampled, shorter version of
   `mm10_snp137_chr1.bed.gz` (since Github doesn't play well with large files).
 `mm10_snp137_chr1.bed.gz` was downloaded from the UCSC Genome Browser's Table
 Browser (http://genome.ucsc.edu/cgi-bin/hgTables). This was file was downloaded
-on 2014-08-01. The truncated file was created with:
+on 2014-08-01. The truncated file was created with (you need GNU sort for this):
 
-        $ gzcat mm10_snp137_chr1.bed.gz | head -n 2700000 | gzip > mm10_snp137_chr1_trunc.bed.gz
+        $ gzcat mm10_snp137_chr1.bed.gz | sort --random-sort | head -n 2700000 | gzip > mm10_snp137_chr1_trunc.bed.gz
+
 
 
 - `Mus_musculus.GRCm38_genome.txt` is a tab-delimited file of all chromosome
