@@ -6,8 +6,9 @@ because simulating and re-aligning reads is an incredibly useful exercise in
 understanding and testing the limitations of aligners and SNP callers. I
 encourage readers to try read simulation in your own organsims and projects.
 
-See `Makefile` for a full workflow for how the BAM file `celegans.sam` (which
-is in the directory above this to make it easier to find). 
+See `Makefile` for a full workflow for how the BAM file `celegans.sam` and
+`celegans.bam`. Both of these files are mirrored in the parent directory so
+they're easier to find.
 
 ## Shuffled BAMs
 
