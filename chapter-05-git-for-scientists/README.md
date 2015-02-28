@@ -23,9 +23,9 @@ version](https://windows.github.com/).
 Commit messages are rather important, but other folks have noticed
 that it is annoying to write them as a project drags on:
 
-![xkcd 1296](http://xkcd.com/1296/)
+![xkcd 1296](http://imgs.xkcd.com/comics/git_commit.png)
 
-[XKCD 1296](http://xkcd.com/1296/)
+[xkcd 1296](http://xkcd.com/1296/)
 
 ## Github Flow
 
