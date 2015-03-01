@@ -149,6 +149,17 @@ Date's writings ([Date on Database: Writings
 are interesting and show some of the disagreement with, and extensions of
 Codd's definitions.
 
+## In-memory Databases
+
+SQLite also supports in-memory databases (which are faster than on-disk
+databases, since memory IO is faster than disk IO). You can create these by
+opening a connection to `:memory:` (rather than your normal SQLite3 file). For example, in Python, this would look like:
+
+    con = sqlite3.connect(":memory:")
+
+See [SQLite's documentation](https://www.sqlite.org/inmemorydb.html) for more
+information. [Python's sqlite3 module documentation](https://docs.python.org/2/library/sqlite3.html) also covers an example.
+
 
 ## Python and SQLite3
 
@@ -156,7 +167,7 @@ I mention that you should always use
 [placeholders](https://docs.python.org/2/library/sqlite3.html#sqlite3.Cursor.execute)
 in SQL statements. Although the focus of this chapter is not creating and
 working with databases open to the public, it's worth noting that not handling
-query building correctly can lead to disasterious results. There's a classic
+query building correctly can lead to disastrous results. There's a classic
 [xkcd](http://xkcd.com/327/) on this:
 
 ![](http://imgs.xkcd.com/comics/exploits_of_a_mom.png)
