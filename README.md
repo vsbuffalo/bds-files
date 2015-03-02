@@ -9,7 +9,7 @@ examples in the book, this repository contains:
    acquired.
 
  - Additional information readers may find interesting for each chapter. These
-   are the +README.md+ files in each chapter's directory. I've also included
+   are the `README.md` files in each chapter's directory. I've also included
    other resources like lists of recommended books for further learning.
 
  - Errata, and any necessary updates if materials become outdated for some
