@@ -113,3 +113,17 @@ by chromosome.
     $ gzcat hapmapRecombHotspots.txt.gz | cut -f2-4 > hapmapRecombHotspots.bed
     $ Rscript split_hotspots.R
 
+## RStudio Resources
+
+[[ https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-08-r/rstudio-image.png | width = 800px ]]
+
+See the [full-sized image here](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-08-r/rstudio-image.png).
+
+See RStudio's
+[documentation](https://support.rstudio.com/hc/en-us/sections/200107586-Using-RStudio)
+for more information on how to use RStudio to its fullest potential. RStudio
+has also created a very useful set of
+[cheatsheets](http://www.rstudio.com/resources/cheatsheets/) on topics like
+data wrangling and RMarkdown.
+
+
