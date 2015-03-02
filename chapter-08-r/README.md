@@ -115,7 +115,7 @@ by chromosome.
 
 ## RStudio Resources
 
-[[ https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-08-r/rstudio-image.png | width = 800px ]]
+![Image of RStudio](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-08-r/rstudio-image.png)
 
 See the [full-sized image here](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-08-r/rstudio-image.png).
 
