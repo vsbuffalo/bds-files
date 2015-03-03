@@ -77,7 +77,7 @@ software. Many bioinformatics articles that implement novel statistical methods
 include an accompanying Bioconductor or R package, making both essential parts
 of bioinformatics analysis.
 
-### The Version of Software I've Used
+### The Versions of Software I've Used
 
 I show both the versions and how I accessed them to demonstrate how you can do
 this in your own work with minimal effort. I've concatenated some of the output
@@ -134,7 +134,7 @@ Ok, this one's a bit ridiculous, but it works. It's the [Unix
 chainsaw](http://confreaks.tv/videos/cascadiaruby2011-the-unix-chainsaw) in
 action. Essentially this uses a terrific tool called
 [Ag](http://betterthanack.com/) to search my book's code for anytime I've
-called `library()` to load a function, turn this into a clean set of library
+called `library()` to load a package, turn this into a clean set of library
 calls for all packages in the book, use this to load in these packages, and
 then print the session info. This uses process substitution, which I teach in
 Chapter 7.
