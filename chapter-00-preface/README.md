@@ -10,6 +10,14 @@ are:
 
  - [Debuggex](https://www.debuggex.com/)
 
+### Text Editors and Setup Details
+
+Personally I use Vim and Emacs. New users usually find Emacs easier, as it
+doesn't have multiple editing modes like Vim does. If you have Emacs installed
+(you likely do) one of the best ways to learn is with its own built-in
+tutorial. This is how I learned many years ago. You can start this tutorial in
+Emacs by entering `C-h t` (that's `control-h`, release, `t`).
+
 ### Why Python and R?
 
 I've chosen to teach bioinformatics data skills in this book with Python and R
