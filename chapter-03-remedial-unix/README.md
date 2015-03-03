@@ -13,6 +13,12 @@ necessary for the following to work):
  - `option-delete`: delete an entire word
  - `option-b`: move cursor backwards an entire word.
  - `option-f`: move cursor forwards an entire word.
+ - `control-c`: cancel input text or when a command is running, stop it.
+ - up arrow: access last entered command.
+ - `control-r`: start searching shell history. Start typing to search -- `enter` will enter the current command. `control-c` will cancel.
+
+I recommend you learn all of these -- they will greatly make working in the
+shell easier and more enjoyable.
 
 ## The Unix Chainsaw
 
