@@ -10,13 +10,26 @@ are:
 
  - [Debuggex](https://www.debuggex.com/)
 
-### Text Editors and Setup Details
+### Text Editors and Terminal Setup Details
 
 Personally I use Vim and Emacs. New users usually find Emacs easier, as it
 doesn't have multiple editing modes like Vim does. If you have Emacs installed
 (you likely do) one of the best ways to learn is with its own built-in
 tutorial. This is how I learned many years ago. You can start this tutorial in
 Emacs by entering `C-h t` (that's `control-h`, release, `t`).
+
+If you use Terminal on OS X, I highly recommend you make one change to the
+settings: set the option key to meta:
+
+![Set Terminal's option key to meta](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-00-preface/terminal-meta.png)
+
+This will allow you to use option key to move about more easily, (e.g.
+option-delete to delete an entire word, option-b to move backwards a word, and
+option-f to move forwards a work).
+
+Personally, I use the [iTerm2](http://iterm2.com/) terminal. You can set the same option there too:
+
+![Set iTerm2's option key to meta](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-00-preface/iterm-meta.png)
 
 ### Why Python and R?
 
