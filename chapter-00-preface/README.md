@@ -1,6 +1,6 @@
 ## Preface
 
-### Regular Expression Resources
+## Regular Expression Resources
 
 I mention these tools in the main text (and elsewhere in the Github repository)
 but some great tools for writing, testing, and debugging regular expressions
@@ -10,13 +10,22 @@ are:
 
  - [Debuggex](https://www.debuggex.com/)
 
-### Text Editors and Terminal Setup Details
+## Text Editors and Terminal Setup Details
 
-Personally I use Vim and Emacs. New users usually find Emacs easier, as it
-doesn't have multiple editing modes like Vim does. If you have Emacs installed
-(you likely do) one of the best ways to learn is with its own built-in
-tutorial. This is how I learned many years ago. You can start this tutorial in
-Emacs by entering `C-h t` (that's `control-h`, release, `t`).
+![xkcd 378](http://imgs.xkcd.com/comics/real_programmers.png)]
+
+Personally I use both Vim and Emacs (this is my resolution to the [editor
+war](http://en.wikipedia.org/wiki/Editor_war). New users usually find Emacs
+easier, as it doesn't have multiple editing modes like Vim does. If you have
+Emacs installed (you likely do) one of the best ways to learn is with its own
+built-in tutorial. This is how I learned many years ago. You can start this
+tutorial in Emacs by entering `C-h t` (that's `control-h`, release, `t`).
+
+In addition to Vim and Emacs, other popular editors are [Sublime
+Text](https://www.sublimetext.com/) and
+[TextMate2](http://macromates.com/download).
+
+### Configuring Your Terminal
 
 If you use Terminal on OS X, I highly recommend you make one change to the
 settings: set the option key to meta:
@@ -35,7 +44,11 @@ See [chapter 3's
 readme](https://github.com/vsbuffalo/bds-files/tree/master/chapter-03-remedial-unix#useful-unix-shortcuts)
 for shortcuts to use when working with the shell.
 
-### Why Python and R?
+Finally, all of my editor and shell configurations are online at
+[github.com/vsbuffalo/dotfiles](https://github.com/vsbuffalo/dotfiles). You can
+get a good sense of how I configure things there.
+
+## Why Python and R?
 
 I've chosen to teach bioinformatics data skills in this book with Python and R
 as the primary analysis languages, with a good dose of Unix command line tools.
@@ -77,7 +90,7 @@ software. Many bioinformatics articles that implement novel statistical methods
 include an accompanying Bioconductor or R package, making both essential parts
 of bioinformatics analysis.
 
-### The Versions of Software I've Used
+## The Versions of Software I've Used
 
 I show both the versions and how I accessed them to demonstrate how you can do
 this in your own work with minimal effort. I've concatenated some of the output
