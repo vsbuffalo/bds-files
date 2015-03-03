@@ -25,7 +25,7 @@ settings: set the option key to meta:
 
 This will allow you to use option key to move about more easily, (e.g.
 option-delete to delete an entire word, option-b to move backwards a word, and
-option-f to move forwards a work).
+option-f to move forwards a word).
 
 Personally, I use the [iTerm2](http://iterm2.com/) terminal. You can set the same option there too:
 
