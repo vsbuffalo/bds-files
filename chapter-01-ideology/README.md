@@ -42,6 +42,49 @@ work. I cover knitr in the R chapter (chapter 8), but only briefly; I highly
 encourage the reader to spend more time learning knitr and using it in their
 work.
 
+## More Information on Unit Testing
+
+I introduce unit testing in this chapter, but don't go into much detail
+throughout the book about this. This is both because the book is already quite
+long, and I think it can be difficult for readers to learn unit testing
+alongside the material in the book. However, unit testing is important (hence,
+why I introduce it) and the curious reader should learn more. I suggest:
+
+ - [Testing Your Code](http://docs.python-guide.org/en/latest/writing/tests/)
+   in the terrific [The Hitchhiker's Guide to
+Python](http://docs.python-guide.org/en/latest/)
+
+ - [Beautiful
+   Testing](http://www.amazon.com/Beautiful-Testing-Professionals-Software-Practice/dp/0596159811)
+by O'Reilly and Goucher.
+
+ - Hadley Wickham's [testthat](https://github.com/hadley/testthat) package for R, and [his corresponding article](http://journal.r-project.org/archive/2011-1/RJournal_2011-1_Wickham.pdf) in the R Journal.
+
+ - [Python's DocTests](https://docs.python.org/2/library/doctest.html)
+
+ - [Nose](https://nose.readthedocs.org/en/latest/) is a particularly nice and
+   popular testing framework for Python.
+
+## Documentation
+
+I don't discuss tools like [iPython Notebook](http://ipython.org/notebook.html)
+or [knitr](http://yihui.name/knitr/) in depth in my book due to space
+limitations (though I introduce them and highly encourage their use). These
+tools are also quite easy to learn on your own. To help get you started, here
+are some resources:
+
+ - iPython Notebook's [introduction](http://ipython.org/ipython-doc/stable/interactive/tutorial.html).
+
+ - iPython Notebook [video and screencasts](http://ipython.org/videos.html)
+
+ - [Karl Broman's](https://twitter.com/kwbroman) terrific [knitr in a
+   nutshell](http://kbroman.org/knitr_knutshell/)
+
+ - [knitr's documentation](http://yihui.name/knitr/)
+
+ - knitr's creator Yihui Xie's book, [Dynamic Documents with R and
+   knitr](http://www.amazon.com/dp/1482203537/ref=cm_sw_su_dp)
+
 ## More information on the "Duke Saga"
 
 There's a lot bioinformaticians can learn from the Duke Saga. It's a useful
