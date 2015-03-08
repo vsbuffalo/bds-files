@@ -63,8 +63,7 @@ repository](https://github.com/vsbuffalo/dotfiles). Below are some other resourc
   Shell](http://www.slideshare.net/jaguardesignstudio/why-zsh-is-cooler-than-your-shell-16194692)
 is a very nice introduction (and also includes a reference to the Knuth
 Programmer Pearls story I teach in chapter 7).
-
- - [zsh: The last shell you’ll ever need](https://friedcpu.wordpress.com/2007/07/24/zsh-the-last-shell-youll-ever-need/).
+- [zsh: The last shell you’ll ever need](https://friedcpu.wordpress.com/2007/07/24/zsh-the-last-shell-youll-ever-need/).
 
 ## Latency Figures and Pipes
 
@@ -389,16 +388,16 @@ useful Linux program can help: `iotop`. Like the `top` we used earlier
 to monitor memory and CPU usage, `iotop` updates at a fixed interval,
 and indicates which processes have the highest disk I/O usage:
 
-   $ iotop
-   Total DISK READ: 37.67 M/s | Total DISK WRITE: 35.43 M/s
-   TID PRIO  USER  DISK READ  DISK WRITE  SWAPIN     IO>    COMMAND
-   85  be/4 violet  2.37 M/s    0.00 B/s  0.00 % 94.97 % biocmd in.fa -o out.txt
-   89  be/4 jess    35.30 M/s   34.72 M/s 0.00 % 56.23 % gzip ref.fa
-     1 be/4 root    0.00 B/s    0.00 B/s  0.00 %  0.00 % init
-     6 rt/4 root    0.00 B/s    0.00 B/s  0.00 %  0.00 % [migration/0]
-     7 be/0 root    0.00 B/s    0.00 B/s  0.00 %  0.00 % [cpuset]
-     8 be/0 root    0.00 B/s    0.00 B/s  0.00 %  0.00 % [khelper]
-     9 be/4 root    0.00 B/s    0.00 B/s  0.00 %  0.00 % [kdevtmpfs]
+    $ iotop
+    Total DISK READ: 37.67 M/s | Total DISK WRITE: 35.43 M/s
+    TID PRIO  USER  DISK READ  DISK WRITE  SWAPIN     IO>    COMMAND
+    85  be/4 violet  2.37 M/s    0.00 B/s  0.00 % 94.97 % biocmd in.fa -o out.txt
+    89  be/4 jess    35.30 M/s   34.72 M/s 0.00 % 56.23 % gzip ref.fa
+      1 be/4 root    0.00 B/s    0.00 B/s  0.00 %  0.00 % init
+      6 rt/4 root    0.00 B/s    0.00 B/s  0.00 %  0.00 % [migration/0]
+      7 be/0 root    0.00 B/s    0.00 B/s  0.00 %  0.00 % [cpuset]
+      8 be/0 root    0.00 B/s    0.00 B/s  0.00 %  0.00 % [khelper]
+      9 be/4 root    0.00 B/s    0.00 B/s  0.00 %  0.00 % [kdevtmpfs]
 
 Here, the imaginary program `biocmd` appears to be competing with gzip for
 disk input and output. Gzip is reading and writing a fair amount, whereas
