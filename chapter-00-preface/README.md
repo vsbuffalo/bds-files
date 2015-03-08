@@ -25,6 +25,10 @@ In addition to Vim and Emacs, other popular editors are [Sublime
 Text](https://www.sublimetext.com/) and
 [TextMate2](http://macromates.com/download).
 
+Also, since I mention it in the book -- here's the [difference between a
+terminal and a
+shell](http://unix.stackexchange.com/questions/4126/what-is-the-exact-difference-between-a-terminal-a-shell-a-tty-and-a-con).
+
 ### Configuring Your Terminal
 
 If you use Terminal on OS X, I highly recommend you make one change to the
