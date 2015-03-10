@@ -77,6 +77,8 @@ Know](http://www.eecs.berkeley.edu/~rcs/research/interactive_latency.html).
 
 ### Managing Processes with `ps` and Brief Look at Memory Management
 
+*Quick note: I have not had time to proof-read this section extensively*
+
 When we start running computationally intensive tasks, we want to keep track of
 how they're running. One way of doing this is by following the output they
 create, perhaps by using `tail -f` on a log file or even `ls -lrt` (list all
@@ -95,11 +97,11 @@ processes that are running even if they weren't started from a terminal (`-x`).
 A feud between different Unix variants from UC Berkeley (BSD) and AT&T (System
 V) and their different `ps` variants in the 1980s means that the cryptic,
 engrained `aux` option is supported widely still (i.e. even in Apple's OS X).
-While we typically just reach for `ps aux`, but since this gives us a *lot( of
-processes, it's common to pipe the output to `grep` to give us a more powerful
-little combination (there's also a tool called +psgrep+ just for this task).
-Below, let's take a look at the top of +ps+ output (so we can see its column
-names) and then look for "samtools":
+Since `ps aux` gives us a *lot* of processes to sort through, it's common to
+pipe the output to `grep` to give us a more powerful little combination
+(there's also a tool called `psgrep` just for this task). Below, let's take a
+look at the top of `ps` output (so we can see its column names) and then look
+for "samtools":
 
     $ ps aux | head -n3
     USER    PID  %CPU %MEM      VSZ    RSS   TT    STAT STARTED      TIME  COMMAND
@@ -113,7 +115,7 @@ to see how much of our CPU (the third column above) and memory (the fourth
 column) a process is using. The process ID, or PID. in the second column is a
 unique identifier given to all our processes. Thee allows us to interact with
 running processes through terminating and adjusting their priority (topics we
-cover in the next section). Since +ps aux+ is such a common idiom to monitor
+cover in the next section). Since `ps aux` is such a common idiom to monitor
 process, a table of the columns and their meaning is included below.
 
 Columns in `ps aux`:
@@ -177,16 +179,17 @@ bioinformatics servers we interact with over SSH are Linux-based, I will cover
 the Linux version. If you have a Mac workstation, consult the table
 <<table-top>> and the `top` manual.
 
-Let's start `top` with the handy `$M` option, which displays our memory
+Let's start `top` with the handy `-M` option, which displays our memory
 units in larger units than kilobytes where appropriate. You should see
 something like the below:
 
+    $ top -M
     top - 19:49:58 up 22 min,  3 users,  load average: 0.88, 0.45, 0.23
     Tasks:  62 total,   3 running,  59 sleeping,   0 stopped,   0 zombie
     Cpu(s): 70.9%us,  2.0%sy,  0.0%ni,  0.0%id, 27.1%wa,  0.0%hi,  0.0%si
     Mem:   594.219M total,  304.293M used,  289.926M free, 4268.000k buffers
     Swap: 1983.992M total,   88.387M used, 1895.605M free,  248.055M cached
-    
+
       PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND
      1978 dalilah   20   0 65896  48m  864 R 86.7  8.2   0:10.17 bwa
      1979 dalilah   20   0 17940 1240  812 S 11.3  0.2   0:01.95 samtools
@@ -240,7 +243,7 @@ The next too lines cover memory and swap space usage. This machine has
 physically more than 594 megabytes of memory, but this is the amount accessible
 to the operating system. The amount of free memory can be an indicator as to
 whether we're running out of memory and our machine is about to hit the much
-slower swap space. 
+slower swap space.
 
 The next lines are each process running, and a summary of their process ID
 (`PID`), who started them (`USER`), their priority (`PR`), the amount of
@@ -251,7 +254,7 @@ columns with `ps aux`, but a big advantage with `top` is that we can
 interactively sort them and watch them update. Recall that your bioinformatics
 processes may need lots of memory one minute, then start getting CPU-hungry the
 next, and finally start reading gigabytes of information off the disk. We can
-watch our process's resource requirements live with `top`. 
+watch our process's resource requirements live with `top`.
 
 Particularly useful is being able to sort this live in `top` (and for
 completness, note this is possible with `ps` too). To sort by memory, just
@@ -364,13 +367,13 @@ Using the `iostat` command without any arguments, we see that there's around
 _waiting_ for I/O tasks to complete. In this case, we see that the disk, and
 not the CPU would likely the cause of a sluggish process.
 
-    $ iostat 
+    $ iostat
     avg-cpu:  %user   %nice %system %iowait  %steal   %idle
               41.52    0.00    7.59   50.89    0.00    0.00
-    
+
     Device:            tps   Blk_read/s   Blk_wrtn/s   Blk_read   Blk_wrtn
     xvdap1           59.83       528.73      4310.89    1002588    8174440
-    
+
 Additionally, for each disk, `iostat` outputs the transfers per second
 (`tps`), block reads and writes per second (`Blk_read/s` and
 `Blk_wrtn/s`), and total blocks read and written (`Blk_read` and
@@ -392,7 +395,7 @@ and indicates which processes have the highest disk I/O usage:
     Total DISK READ: 37.67 M/s | Total DISK WRITE: 35.43 M/s
     TID PRIO  USER  DISK READ  DISK WRITE  SWAPIN     IO>    COMMAND
     85  be/4 violet  2.37 M/s    0.00 B/s  0.00 % 94.97 % biocmd in.fa -o out.txt
-    89  be/4 jess    35.30 M/s   34.72 M/s 0.00 % 56.23 % gzip ref.fa
+    89  be/4 lauren  35.30 M/s   34.72 M/s 0.00 % 56.23 % gzip ref.fa
       1 be/4 root    0.00 B/s    0.00 B/s  0.00 %  0.00 % init
       6 rt/4 root    0.00 B/s    0.00 B/s  0.00 %  0.00 % [migration/0]
       7 be/0 root    0.00 B/s    0.00 B/s  0.00 %  0.00 % [cpuset]
@@ -467,7 +470,7 @@ contain the largest files:
     640G   /home/vinceb/Projects/tarsier_genes/data/alignments
 
 Clearly, there's some big files in our project `alignment/` directory we may
-want to delete or compress with a program like `gzip`. 
+want to delete or compress with a program like `gzip`.
 
 The program `du` can also be combined with `sort` and `head` to find the
 largest files on a Unix system. This is a good example of how Unix pipes allow

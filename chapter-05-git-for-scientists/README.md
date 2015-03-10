@@ -27,6 +27,21 @@ that it is annoying to write them as a project drags on:
 
 [xkcd 1296](http://xkcd.com/1296/)
 
+## Undoing Commits
+
+One way to "undo" commits is with `git revert`. `git revert` doesn't truly undo
+commits though, it just adds a new commit on top of the past commit. See
+[Atlassian's
+tutorial](https://www.atlassian.com/git/tutorials/undoing-changes/git-revert)
+for a good explanation of the distinction.
+
+Truly undoing a commit requires advanced `git reset`, which *could* lead to
+data loss (if you're not careful). See:
+
+ - [How to undo the last commit](http://stackoverflow.com/questions/927358/how-to-undo-the-last-commit) on StackOverflow.
+
+ - [Atlassian's tutorial on git reset](https://www.atlassian.com/git/tutorials/undoing-changes/git-reset)
+
 ## Github Flow
 
 Git is a versatile version control system; there are many workflows you and
