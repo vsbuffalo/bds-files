@@ -1,0 +1,2 @@
+This file is encoded using UTF-8. This allows the use of an extended character
+set, including characters like π and ¼.

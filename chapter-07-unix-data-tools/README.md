@@ -9,14 +9,12 @@ One particularly excellent quote from McIlroy that I didn't include is:
 > industrial-strength Fabergé egg -- intricate, wonderfully worked, refined
 > beyond all ordinary desires, a museum piece from the start.
 
+<!--
 
+leftover:
 grep "^#" -v Mus_musculus.GRCm38.75_chr1.gtf | awk '{if ($3=="gene" && $2 == "protein_coding") { print $0 }}' | cut -f 9 | sed 's/; / /g' | sed 's/ / /g' | cut -f2,4 | sed 's/"//g' > Mus_musculus.GRCm38.75_chr1_genes.txt
 
-wc -l Mus_musculus.GRCm38.75_chr1_genes.txt
-
-verify in martview http://uswest.ensembl.org/biomart/martview/ == same number
-
-contam.fastq -- shorter version (used in book so examples print more clearly)
+contam.fastq -- shorter version (used in book so examples print more clearly) -->
 
 ## Regular Expressions
 
@@ -27,6 +25,28 @@ There's numerous good resources on Regular Expressions, but one of the best ways
  - [regular expressions 101](https://regex101.com/)
  - [Debbugex](https://www.debuggex.com/)
 
+
+## Dealing with a Variable Number of Spaces
+
+Plaintext data that uses a variable number of spaces to delimit columns looks
+clean in the terminal but can be a nightmare to parse. Still, some programs
+will occasionally output data this way (usually to provide easily readable data
+to users). However, data in this format will *not* work with Unix data tools
+like `cut`; it first needs to be converted to tab-delimited (or CSV). Using the
+tool `sed` this is quite easy:
+
+    $ sed 's/ */	/g' badly_formatted.txt > tab_delimited.txt
+
+Note that the character between `/  /` is a literal tab (you can enter this in
+your shell using control-w <tab>). However, note that this will introduce a
+slew of problems if your columns themselves have spaces in them (which can
+common in data). This why tab-delimited and CSV formats are preferable to
+variable spaces.
+
+## Grep Tricks
+
+Here's an interesting `grep` trick to make it [50 times
+faster](https://blog.x-way.org/Linux/2013/12/15/Make-grep-50x-faster.html).
 
 ## Parsing GTF Group Column with Awk/Bioawk
 
