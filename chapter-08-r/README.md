@@ -103,6 +103,47 @@ following:
     > y
     [1] -1  1 -1  1
 
+## Pre-allocating vectors
+
+I don't have the space to introduce all important R concepts in this chapter,
+but one point worth mentioning is that if you do need to loop over a structure
+with a `for` or `while` loop, always *preallocate* your results vector. You can
+create empty numeric vectors with `numeric(len)` and empty integer vectors with
+`integer(len)`, where `len` is the length. For example, if you were to loop
+over too vectors to sum their values pairwise, do not use:
+
+    x <- rnorm(10)
+    y <- rnorm(10)
+    res <- NULL
+    for (i in 1:length(x)) {
+      res <- c(res, x[i] + y[i])
+    }
+
+First, this is completely unecessary since we could calculate this with `res <-
+x + y`. Second, even if our `for` loop did some computation we couldn't do with
+vectorized operations (e.g. the current step depends on the last step's value),
+this code would be needlessly slow because appending to vectors with `res <-
+c(res, ...)` is extremely computationally expensive in R.
+
+R's vectors are allocated in memory to the _exact_ length that the need to be.
+So each iteration of the above code requires (1) allocating a new `res` vector
+one element longer, and (2) copying all of `res`'s current elements over to
+this new vector. Since this new vector is only one element longer, it's only
+long enough for this iteration -- guaranteeing we need to allocate a new vector
+the next iteration and copy everything over again! In contrast Python's lists'
+`list.append()` operation is fast, because each vector is [geometrically
+expanded](http://en.wikipedia.org/wiki/Dynamic_array#Geometric_expansion_and_amortized_cost).
+
+The correct way to do this (assuming in your real code something in the `for`
+loop can't be parallelized!) is:
+
+    x <- rnorm(10)
+    y <- rnorm(10)
+    res <- numeric(10) # preallocation!
+    for (i in 1:length(x)) {
+      res[i] <- x[i] + y[i]
+    }
+
 ## HapMap Hotspot Data for the Data Combining Example
 
 I use HapMap recombination hotspots on hg17 in this example. The very simple

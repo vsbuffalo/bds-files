@@ -1,8 +1,15 @@
 # plots.R -- plots for the chapter (grey scale and themeless)
 library(ggplot2)
 library(gridExtra)
-gsave <- function(x, name) {
-  ggsave(paste0("~/Dropbox/bioinfo_data_skills/images/ch08/ggplot-", name, ".png"), x)
+
+# This is where to save the plots for the book.
+#
+# If you're a reader trying to recreate my plots, change this to a directory and
+# prefix you want the images saved to. And yes this is an absolute link ;-) (see ch2)
+BOOKDIR <- "~/Dropbox/bioinfo_data_skills/images/ch08/ggplot-"
+
+gsave <- function(x, name, ...) {
+  ggsave(paste0(BOOKDIR, name, ".png"), x, ...)
   cat(sprintf('[[ch08-ggplot-%s]]
 .
 image::images/ch08/ggplot-%s.png[float="true"]\n', name, name))
@@ -34,7 +41,7 @@ p <- ggplot(d) + geom_density(aes(x=diversity), fill="black") + theme
 gsave(p, "density-01")
 
 
-ggplot(d) + geom_density(aes(x=diversity, fill=cent), alpha=0.4) + theme + scale_fill_grey() 
+p <- ggplot(d) + geom_density(aes(x=diversity, fill=cent), alpha=0.4) + theme + scale_fill_grey() 
 gsave(p, "density-02")
 
 p <- ggplot(d, aes(x=depth, y=total.SNPs)) + geom_point() + geom_smooth(color="grey") + theme
@@ -47,10 +54,12 @@ d$GC.binned <- cut(d$percent.GC, 5)
 p <- ggplot(d) + geom_density(aes(x=depth, linetype=GC.binned), alpha=0.5) + theme
 gsave(p, "gc-01")
 
-p <- ggplot(d) + geom_bar(aes(x=GC.binned)) + theme
-q <- ggplot(d) + geom_bar(aes(x=percent.GC)) + theme
+#p <- ggplot(d) + geom_bar(aes(x=GC.binned)) + theme + theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.5))
+p <- ggplot(d) + geom_bar(aes(x=GC.binned)) + theme + theme(axis.text.x=element_text(size=8))
+q <- ggplot(d) + geom_bar(aes(x=percent.GC)) + theme+ theme(axis.text.x=element_text(size=8))
 r <- arrangeGrob(p, q, nrow=1)
-gsave(p, "gc-02")
+r
+gsave(r, "gc-02", width=6, height=4)
 
 
 ## motif example
@@ -60,7 +69,7 @@ mtfs$pos <- paste(mtfs$chr, mtfs$motif_start, sep="-")
 rpts$pos <- paste(rpts$chr, rpts$motif_start, sep="-")
 mtfs$repeat_name <- rpts$name[match(mtfs$pos, rpts$pos)]
 
-p <- ggplot(mtfs, aes(x=dist, y=recom)) + geom_point(size=1) + geom_smooth(method='loess', se=FALSE, span=1/10) +theme
+p <- ggplot(mtfs, aes(x=dist, y=recom)) + geom_point(size=1, color="grey") + geom_smooth(method='loess', se=FALSE, span=1/10) +theme
 gsave(p, "mtfs-01")
 
 
