@@ -45,3 +45,14 @@ on 2014-08-01. The truncated file was created with (you need GNU sort for this):
 
         curl ftp://ftp.ensembl.org/pub/release-75/fasta/mus_musculus/dna/Mus_musculus.GRCm38.75.dna_rm.toplevel.fa.gz \
         | bioawk -c fastx '{print $name"\t"length($seq)}' > Mus_musculus.GRCm38_genome.txt
+
+## On Python's 0-Indexing
+
+I use Python and R's indexing to introduce 0- and 1-based range systems. Here's
+Python's creator Guido van Rossum on [why Python uses 0-based
+indexing](http://python-history.blogspot.com/2013/10/why-python-uses-0-based-indexing.html).
+
+## Why use `biocLite()`?
+
+Why use `biocLite()` rather than `install.packages()`? See this description
+from [Bioconductor](http://www.bioconductor.org/install/#why-biocLite).
