@@ -60,10 +60,10 @@ You can also set `IFS` to commas or semicolons where appropriate.
 ## On the Danger of Command Substitution and Looping over Files
 
 In this chapter, to loop through files with a Bash `for` loop, I first load
-files into an array and loop through with `${bash_array[@]}`. As with anything
-in computing, there are more than one ways to do this. And as with anything in
-Bash, there are numerous pitfalls you should be aware of. Here's why the book
-teaches the approach it does;
+files into an array using command substitution, and then loop through with
+`${bash_array[@]}`. As with anything in computing, there are more than one ways
+to do this. And as with anything in Bash, there are numerous pitfalls you
+should be aware of. Here's why the book teaches the approach it does;
 
 Using direct command substitution in a `for` loop like:
 
@@ -121,7 +121,7 @@ about `${bash_array[@]}` versus `${bash_array[*]}`.
    about quoting in Bash.
 
  - You can also use [read](http://stackoverflow.com/a/23357277/147427) with
-   null-delimited lines (as we do in the chapter with `find` and `xargs` but I
+   null-delimited lines (as we do in the chapter with `find` and `xargs`) but I
 believe this is too confusing to teach in the book. New versions of Bash also
 have the [mapfile](http://wiki.bash-hackers.org/commands/builtin/mapfile) and
 readarray commands for this.
