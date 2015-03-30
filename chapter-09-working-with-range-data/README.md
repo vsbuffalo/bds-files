@@ -1,5 +1,10 @@
 # Ranges Chapter Supplementary Material
 
+Why do we use ranges? The terrific [Science
+Web](https://thescienceweb.wordpress.com/2015/03/25/most-bioinformaticians-to-be-replaced-by-bedtools/)
+summarizes: [Most bioinformaticians to be replaced by
+BEDTools](https://thescienceweb.wordpress.com/2015/03/25/most-bioinformaticians-to-be-replaced-by-bedtools/)
+
 ## A note on the Introduction
 
 While the simple linear sequence representation of genomes begins to break down

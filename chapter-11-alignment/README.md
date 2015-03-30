@@ -127,3 +127,9 @@ mapping to) a universal human reference genome at the Simon's Institute. In
 [the beginning of the talk](https://www.youtube.com/watch?v=Hq0SP7EraxY) he
 discusses some problems with the VCF format.
 
+## More VCF Genotype representation
+
+There's numerous other useful genotype VCF fields I didn't cover, such as `GQ`,
+`AD`, and `DP`. I really like GATK's documentation [on this
+subject](http://gatkforums.broadinstitute.org/discussion/1268/how-should-i-interpret-vcf-files-produced-by-the-gatk)
+— it's clear and very well written.
