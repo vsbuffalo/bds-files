@@ -35,4 +35,9 @@ bioinformatics.
 
  - [Algorithms with C](http://www.amazon.com/Mastering-Algorithms-C-Kyle-Loudon/dp/1565924533/ref=sr_1_3?s=books&ie=UTF8&qid=1425199915&sr=1-3&keywords=algorithms+in+C) Great if you're interested in getting started with C in bioinformatics.
 
+**Bioinformatics Algorithms**
 
+ - [Bioinformatics Algorithms by Phillip Compeau and Pavel
+   Pevzner](https://secure.mybookorders.com/Orderpage/1402) looks to be an
+absolutely stellar book (seriously, one of the best on the subject I've seen...
+ever). I'd say this is a terrific next book after *Bioinformatics Data Skills*.
