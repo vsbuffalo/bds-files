@@ -25,6 +25,16 @@ There's numerous good resources on Regular Expressions, but one of the best ways
  - [regular expressions 101](https://regex101.com/)
  - [Debbugex](https://www.debuggex.com/)
 
+## A note about the `Mus_musculus.GRCm38.75_chr1.bed` file
+
+There's a subtle (yet exceedingly common in bioinformatics) [off by
+one](https://en.wikipedia.org/wiki/Off-by-one_error) error in this file
+(sorry!). I thought about fixing it during the book editing process, but
+actually think it's a valuable lesson, so I'll keep it in there. Can you find
+out what it is?
+
+If you need a hint: read chapter 9's section genomic range formats and use
+`shasum` to compare the `test.txt` file to `Mus_musculus.GRCm38.75_chr1.bed`.
 
 ## Dealing with a Variable Number of Spaces
 
