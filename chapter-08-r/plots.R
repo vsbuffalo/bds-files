@@ -55,7 +55,7 @@ p <- ggplot(d) + geom_density(aes(x=depth, linetype=GC.binned), alpha=0.5) + the
 gsave(p, "gc-01")
 
 #p <- ggplot(d) + geom_bar(aes(x=GC.binned)) + theme + theme(axis.text.x=element_text(angle=90,hjust=1,vjust=0.5))
-p <- ggplot(d) + geom_bar(aes(x=GC.binned)) + theme + theme(axis.text.x=element_text(size=8))
+p <- ggplot(d) + geom_bar(aes(x=GC.binned)) + theme + theme(axis.text.x=element_text(size=5.5))
 q <- ggplot(d) + geom_bar(aes(x=percent.GC)) + theme+ theme(axis.text.x=element_text(size=8))
 r <- arrangeGrob(p, q, nrow=1)
 r
