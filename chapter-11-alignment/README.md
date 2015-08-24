@@ -1,5 +1,18 @@
 # Chapter 11 - Working with Alignment Data
 
+## A note about Samtools versions
+
+This book requires the [latest Samtools](http://www.htslib.org/); in the book
+I've used:
+
+    $ samtools --version
+    samtools 1.2
+    Using htslib 1.2
+    Copyright (C) 2015 Genome Research Ltd.
+
+Older versions require some flags that are now unnecessary, like `-S` with
+`samtools view` to specify input is a SAM file (now filetype is autodetected).
+
 ## `celegans.sam` and `celegans.bam`
 
 Both of these sample files were simulated -- see the directory
