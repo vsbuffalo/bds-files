@@ -26,4 +26,4 @@ Forwarding](http://heipei.github.io/2015/02/26/SSH-Agent-Forwarding-considered-h
 > agent.
 
 While this is a possible concern, I (and many others) still use SSH forwarding
-as taught in the book. But it's good to be away of this as a possible issue.
+as taught in the book. But it's good to be aware of this as a possible issue.
