@@ -33,6 +33,10 @@ The "garden hose" quote is from an October 1964 [Bell Labs
 memo](http://cm.bell-labs.com/who/dmr/mdmpipe.html). There's a cool image of
 the memo here: http://doc.cat-v.org/unix/pipes/
 
+Brian Kernighan gives a great interview about the pipeline concept on the
+[Computerphile YouTube
+channel](https://www.youtube.com/watch?v=bKzonnwoR2I&feature=youtu.be).
+
 ## The Modular Unix Approach versus Monolithic Programs
 
 There has been some debate about the Unix approach to bioinformatics versus
