@@ -5,7 +5,7 @@ illustrate how `diff` works.
 
 ## Code Examples for Case Study in Reproducibily Downloading Data
 
-Many of these links are too long to fit in a page's width (and too logn to type
+Many of these links are too long to fit in a page's width (and too long to type
 out too). I have included these code examples below to make it easier to copy
 and paste.
 
